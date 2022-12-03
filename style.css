@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100vw;
+    min-width: 320px;
+    max-width: 1200px;
+    min-height: 100vh;
+    height: auto;
+    margin: 0.1vw auto;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.container>* {
+    padding: 0.5vw 3vw;
+}
+
+/* header */
+
+header {
+    flex-basis: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* logo */
+
+.logo {
+    width: 15%;
+    height: 30%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.logo span {
+    margin-left: 1vw;
+}
+
+/* navigation */
+
+.navigation {
+    height: 30%;
+    padding: 0 2px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation nav {
+    width: 50%;
+    margin-left: 1vw;
+}
+.navigation nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.navigation nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.navigation__search {
+    width: 10%;
+    height: 80%;
+    border: 1px solid black;
+}
+
+/* main */
+
+main {
+    display: flex;
+}
+
+/* content */
+
+.content {
+    width: 60%;
+    padding: 1.5vw 1.5vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.content>* {
+    margin: 10px 0;
+}
+.content__img-big {
+    height: 200px;
+    background-color: gray;
+}
+
+
+/* aside */
+aside {
+    width: 40%;
+    padding-left:  1.5vw;
+}
+/* aside list */
+.aside__list {
+    padding: 1.5vw;
+    border: 1px solid black;
+}
+.aside__list p {
+    font-size: 1.2rem;
+}
+.aside__list ul {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+/* aside gallery */
+.aside__gallery {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 1.5vw;
+    margin-top: 1.5vw;
+}
+.aside__gallery p {
+    font-size: 1.2rem;
+}
+.gallery_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.gallery_cont {
+    width: 100%;
+    padding-top: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+}
+.img-small {
+    width: 5vw;
+    height: 5vw;
+    background-color: gray;
+}
+
+/* footer */
+footer p {
+    font-size: 1.1rem;
+    padding-bottom: 0.5vw;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 20%;
+    }
+    .navigation {
+        position: relative;
+    }
+    .navigation__search {
+        position: absolute;
+        top: -125%;
+        left: 80%;
+        width: 20%;
+        height: 60%;
+    }
+    .aside__gallery p {
+        margin-left: 2vw;
+    }
+    .gallery_container {
+        flex-direction: row;
+    }
+    .gallery_cont {
+        align-items: center;
+        flex-direction: column;
+    }
+    .img-small {
+        width: 10vw;
+        height: 10vw;
+        margin: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* header */
+    .logo {
+        width: 50%;
+    }
+    .navigation {
+        position: relative;
+    }
+    .navigation__search {
+        position: absolute;
+        top: -165%;
+        left: 60%;
+        width: 40%;
+        height: 60%;
+    }
+    .navigation nav {
+        width: 100%;
+        margin: 0 1vw;
+        justify-content: space-around;
+    }
+    /* main */
+    main {
+        flex-direction: column;
+    }
+    .content {
+        width: 100%;
+        padding: 0;
+    }
+    .content>*:not(.content__img-big) {
+        padding: 1.5vw;
+        margin: 0;
+    }
+    .content__img-big {
+        margin: 1.5vw;
+    }
+    /* main aside */
+    .aside__list {
+        display: none;
+    }
+    aside {
+        width: 100%;
+        padding: 0;
+        margin-top: 1.5vw;
+    }
+    .gallery_container {
+        flex-direction: row;
+    }
+    .gallery_cont {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .img-small {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .disnone {
+        display: none;
+    }
+    
+}
